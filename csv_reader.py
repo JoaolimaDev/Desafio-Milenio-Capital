@@ -175,17 +175,16 @@ def processCsv(csv = None, selectedColumns = None, rowFilterDefinitions = None):
         print(df.to_csv(index=False))
         
         
+# main callback recebimento de paramentros
 if __name__ == "__main__":
     if len(sys.argv) < 5:
-        print("Uso: csv_reader.py <mode> <csvData/csvFilePath> <selectedColumns> <rowFilterDefinitions>")
+        print("Uso: csv_processor.py <mode> <csvData/csvFilePath> <selectedColumns> <rowFilterDefinitions>")
         sys.exit(1)
 
     mode = sys.argv[1]
     data_or_path = sys.argv[2]
     selected_columns = sys.argv[3]
-    row_filter_definitions = sys.argv[4].replace('\n', ' and ').replace('>', '==')
-    
-    row_filter_definitions = row_filter_definitions.replace('l1c1', "'l1c1'").replace('l1c3', "'l1c3'")
+    row_filter_definitions = sys.argv[4]
 
     if mode == "file":
         processCsvFile(data_or_path, selected_columns, row_filter_definitions)
