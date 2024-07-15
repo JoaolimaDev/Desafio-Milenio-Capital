@@ -30,9 +30,9 @@ Antes de começar, verifique se você atendeu aos seguintes requisitos:
 $ git clone https://github.com/JoaolimaDev/Desafio-Milenio-Capital.git
 # Acesse a pasta do projeto no seu terminal/cmd
 $ cd Desafio-Milenio-Capital
-# Instalar as dependências
+# Instalar as dependências e run docker
 $ sudo docker build -t <nomei sua build> .
-$  sudo docker run <nome escolhido>
+$ sudo docker run <nome escolhido>
 ```
 
 ## 🤝 Colaboradores
